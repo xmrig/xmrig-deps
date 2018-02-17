@@ -5,7 +5,6 @@
 [![GitHub license](https://img.shields.io/github/license/xmrig/xmrig-deps.svg)](https://github.com/xmrig/xmrig-deps/blob/master/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/xmrig/xmrig-deps.svg)](https://github.com/xmrig/xmrig-deps/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/xmrig/xmrig-deps.svg)](https://github.com/xmrig/xmrig-deps/network)
-> XMRig-Deps  -  Windows XMRig dependencies 
 
 This repository only contains a binary build of XMRig dependencies. 
 
