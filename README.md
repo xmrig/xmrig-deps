@@ -8,9 +8,10 @@
 
 This repository only contains a binary build of XMRig dependencies. 
 
-* [libuv](https://github.com/libuv/libuv) 1.19.2
-* [libuv](https://github.com/libuv/libuv) 1.15.0 (gcc/x86) for Windows XP/2003.
-* [libmicrohttpd](https://www.gnu.org/software/libmicrohttpd) 0.9.58
+* [libuv](https://github.com/libuv/libuv) 1.20.3
+* [libmicrohttpd](https://www.gnu.org/software/libmicrohttpd) 0.9.59
+
+Only **gcc/x86** with older lib versions supports Windows XP/2003.
 
 ## Usage
 ### Microsoft Visual Studio 2017
