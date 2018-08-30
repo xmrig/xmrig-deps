@@ -8,7 +8,7 @@
 
 This repository only contains a binary build of XMRig dependencies. 
 
-* [libuv](https://github.com/libuv/libuv) 1.20.3
+* [libuv](https://github.com/libuv/libuv) 1.23.0
 * [libmicrohttpd](https://www.gnu.org/software/libmicrohttpd) 0.9.59
 
 Only **gcc/x86** with older lib versions supports Windows XP/2003.
