@@ -8,13 +8,16 @@
 
 This repository only contains a binary build of XMRig dependencies. 
 
-* [libuv](https://github.com/libuv/libuv) 1.23.0
-* [OpenSSL](https://www.openssl.org) 1.1.1
-* [libmicrohttpd](https://www.gnu.org/software/libmicrohttpd) 0.9.59
+* [libuv](https://github.com/libuv/libuv) 1.29.1
+* [OpenSSL](https://www.openssl.org) 1.1.1b
+* [libmicrohttpd](https://www.gnu.org/software/libmicrohttpd) 0.9.63
 
 Only **gcc/x86** with older lib versions supports Windows XP/2003.
 
 ## Usage
+### Microsoft Visual Studio 2019
+- x64 `cmake .. -G "Visual Studio 16 2019" -A x64 -DXMRIG_DEPS=c:\xmrig-deps\msvc2019\x64`
+
 ### Microsoft Visual Studio 2017
 
 - x64 `cmake .. -G "Visual Studio 15 2017 Win64" -DXMRIG_DEPS=c:\xmrig-deps\msvc2017\x64`
