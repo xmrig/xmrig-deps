@@ -55,6 +55,10 @@
 /* Define to 1 if you have the <cuda_runtime_api.h> header file. */
 /* #undef HAVE_CUDA_RUNTIME_API_H */
 
+/* Define to 1 if you have the declaration of `bind', and to 0 if you don't.
+   */
+#define HAVE_DECL_BIND 0
+
 /* Define to 1 if you have the declaration of `CTL_HW', and to 0 if you don't.
    */
 /* #undef HAVE_DECL_CTL_HW */
@@ -483,6 +487,10 @@
 /* Define to 1 if you have the `clzl' function. */
 /* #undef HWLOC_HAVE_CLZL */
 
+/* Define to 1 if snprintf supports NULL output buffer and returns the correct
+   length on truncation */
+/* #undef HWLOC_HAVE_CORRECT_SNPRINTF */
+
 /* Define to 1 if the CPU_SET macro works */
 /* #undef HWLOC_HAVE_CPU_SET */
 
@@ -540,7 +548,7 @@
 /* Define to 1 if you have the `libxml2' library. */
 /* #undef HWLOC_HAVE_LIBXML2 */
 
-/* Define to 1 if building the Linux I/O component */
+/* Define to 1 for I/O discovery in the Linux component */
 /* #undef HWLOC_HAVE_LINUXIO */
 
 /* Define to 1 if enabling Linux-specific PCI discovery in the Linux I/O
@@ -623,7 +631,7 @@
 
 /* The library version, always available, even in embedded mode, contrary to
    VERSION */
-#define HWLOC_VERSION "2.0.4"
+#define HWLOC_VERSION "2.1.0"
 
 /* The library version optional greek suffix string */
 #define HWLOC_VERSION_GREEK ""
@@ -632,10 +640,10 @@
 #define HWLOC_VERSION_MAJOR 2
 
 /* The library version minor number */
-#define HWLOC_VERSION_MINOR 0
+#define HWLOC_VERSION_MINOR 1
 
 /* The library version release number */
-#define HWLOC_VERSION_RELEASE 4
+#define HWLOC_VERSION_RELEASE 0
 
 /* Define to 1 on WINDOWS */
 #define HWLOC_WIN_SYS 1
@@ -645,6 +653,9 @@
 
 /* Define to 1 on x86_64 */
 #define HWLOC_X86_64_ARCH 1
+
+/* Define if lstopo Cairo/X11 interactive graphical output is supported */
+/* #undef LSTOPO_HAVE_X11 */
 
 /* Define to the sub-directory where libtool stores uninstalled libraries. */
 #define LT_OBJDIR ".libs/"
@@ -662,7 +673,7 @@
 #define PACKAGE_NAME "hwloc"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "hwloc 2.0.4"
+#define PACKAGE_STRING "hwloc 2.1.0"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "hwloc"
@@ -671,7 +682,7 @@
 #define PACKAGE_URL ""
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "2.0.4"
+#define PACKAGE_VERSION "2.1.0"
 
 /* The size of `unsigned int', as computed by sizeof. */
 #define SIZEOF_UNSIGNED_INT 4
@@ -714,7 +725,7 @@
 
 
 /* Version number of package */
-#define VERSION "2.0.4"
+#define VERSION "2.1.0"
 
 /* Define to 1 if the X Window System is missing or not being used. */
 #define X_DISPLAY_MISSING 1
