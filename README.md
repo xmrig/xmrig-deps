@@ -8,10 +8,9 @@
 
 This repository only contains a binary build of XMRig dependencies. 
 
-* [libuv](https://github.com/libuv/libuv) 1.31.0
-* [OpenSSL](https://www.openssl.org) 1.1.1c
-* [libmicrohttpd](https://www.gnu.org/software/libmicrohttpd) 0.9.63
-* [hwloc](https://www.open-mpi.org/projects/hwloc) 2.0.4
+* [libuv](https://github.com/libuv/libuv) 1.34.0
+* [OpenSSL](https://www.openssl.org) 1.1.1d
+* [hwloc](https://www.open-mpi.org/projects/hwloc) 2.1.0
 
 Only **gcc/x86** with older lib versions supports Windows XP/2003.
 
