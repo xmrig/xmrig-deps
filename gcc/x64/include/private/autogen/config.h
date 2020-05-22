@@ -79,9 +79,41 @@
    don't. */
 #define HAVE_DECL_GETPROGNAME 0
 
+/* Define to 1 if you have the declaration of `HW_MEMSIZE', and to 0 if you
+   don't. */
+/* #undef HAVE_DECL_HW_MEMSIZE */
+
+/* Define to 1 if you have the declaration of `HW_MEMSIZE64', and to 0 if you
+   don't. */
+/* #undef HAVE_DECL_HW_MEMSIZE64 */
+
 /* Define to 1 if you have the declaration of `HW_NCPU', and to 0 if you
    don't. */
 /* #undef HAVE_DECL_HW_NCPU */
+
+/* Define to 1 if you have the declaration of `HW_PHYSMEM', and to 0 if you
+   don't. */
+/* #undef HAVE_DECL_HW_PHYSMEM */
+
+/* Define to 1 if you have the declaration of `HW_PHYSMEM64', and to 0 if you
+   don't. */
+/* #undef HAVE_DECL_HW_PHYSMEM64 */
+
+/* Define to 1 if you have the declaration of `HW_REALMEM', and to 0 if you
+   don't. */
+/* #undef HAVE_DECL_HW_REALMEM */
+
+/* Define to 1 if you have the declaration of `HW_REALMEM64', and to 0 if you
+   don't. */
+/* #undef HAVE_DECL_HW_REALMEM64 */
+
+/* Define to 1 if you have the declaration of `HW_USERMEM', and to 0 if you
+   don't. */
+/* #undef HAVE_DECL_HW_USERMEM */
+
+/* Define to 1 if you have the declaration of `HW_USERMEM64', and to 0 if you
+   don't. */
+/* #undef HAVE_DECL_HW_USERMEM64 */
 
 /* Define to 1 if you have the declaration of `lgrp_latency_cookie', and to 0
    if you don't. */
@@ -220,6 +252,9 @@
 /* Define to 1 if the system has the type `LOGICAL_PROCESSOR_RELATIONSHIP'. */
 #define HAVE_LOGICAL_PROCESSOR_RELATIONSHIP 1
 
+/* Define to 1 if you have the <mach_init.h> header file. */
+/* #undef HAVE_MACH_INIT_H */
+
 /* Define to 1 if you have the <mach/mach_host.h> header file. */
 /* #undef HAVE_MACH_MACH_HOST_H */
 
@@ -346,6 +381,9 @@
 /* Define to 1 if you have the <sys/cpuset.h> header file. */
 /* #undef HAVE_SYS_CPUSET_H */
 
+/* Define to 1 if you have the <sys/domainset.h> header file. */
+/* #undef HAVE_SYS_DOMAINSET_H */
+
 /* Define to 1 if you have the <sys/lgrp_user.h> header file. */
 /* #undef HAVE_SYS_LGRP_USER_H */
 
@@ -389,7 +427,7 @@
 /* #undef HAVE_X11_KEYSYM_H */
 
 /* Define to 1 if you have the <X11/Xlib.h> header file. */
-/* #undef HAVE_X11_XLIB_H */
+#define HAVE_X11_XLIB_H 1
 
 /* Define to 1 if you have the <X11/Xutil.h> header file. */
 /* #undef HAVE_X11_XUTIL_H */
@@ -417,6 +455,9 @@
 
 /* Define to 1 on *FREEBSD */
 /* #undef HWLOC_FREEBSD_SYS */
+
+/* Define to 1 if --enable-32bits-pci-domain is called. */
+/* #undef HWLOC_HAVE_32BITS_PCI_DOMAIN */
 
 /* Whether your compiler has __attribute__ or not */
 #define HWLOC_HAVE_ATTRIBUTE 1
@@ -489,7 +530,7 @@
 
 /* Define to 1 if snprintf supports NULL output buffer and returns the correct
    length on truncation */
-/* #undef HWLOC_HAVE_CORRECT_SNPRINTF */
+#define HWLOC_HAVE_CORRECT_SNPRINTF 1
 
 /* Define to 1 if the CPU_SET macro works */
 /* #undef HWLOC_HAVE_CPU_SET */
@@ -536,6 +577,12 @@
 /* Define to 1 if you have the `flsl' function. */
 /* #undef HWLOC_HAVE_FLSL */
 
+/* Define to 1 if gcc -Wcast-function-type is supported and enabled */
+/* #undef HWLOC_HAVE_GCC_W_CAST_FUNCTION_TYPE */
+
+/* Define to 1 if gcc -Wmissing-field-initializers is supported and enabled */
+/* #undef HWLOC_HAVE_GCC_W_MISSING_FIELD_INITIALIZERS */
+
 /* Define to 1 if you have the GL module components. */
 /* #undef HWLOC_HAVE_GL */
 
@@ -554,6 +601,9 @@
 /* Define to 1 if enabling Linux-specific PCI discovery in the Linux I/O
    component */
 /* #undef HWLOC_HAVE_LINUXPCI */
+
+/* Define to 1 if the hwloc library should use ltdl for loading plugins */
+/* #undef HWLOC_HAVE_LTDL */
 
 /* Define to 1 if you have the `NVML' library. */
 /* #undef HWLOC_HAVE_NVML */
@@ -631,7 +681,7 @@
 
 /* The library version, always available, even in embedded mode, contrary to
    VERSION */
-#define HWLOC_VERSION "2.1.0"
+#define HWLOC_VERSION "2.2.0"
 
 /* The library version optional greek suffix string */
 #define HWLOC_VERSION_GREEK ""
@@ -640,7 +690,7 @@
 #define HWLOC_VERSION_MAJOR 2
 
 /* The library version minor number */
-#define HWLOC_VERSION_MINOR 1
+#define HWLOC_VERSION_MINOR 2
 
 /* The library version release number */
 #define HWLOC_VERSION_RELEASE 0
@@ -673,7 +723,7 @@
 #define PACKAGE_NAME "hwloc"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "hwloc 2.1.0"
+#define PACKAGE_STRING "hwloc 2.2.0"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "hwloc"
@@ -682,7 +732,7 @@
 #define PACKAGE_URL ""
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "2.1.0"
+#define PACKAGE_VERSION "2.2.0"
 
 /* The size of `unsigned int', as computed by sizeof. */
 #define SIZEOF_UNSIGNED_INT 4
@@ -725,7 +775,7 @@
 
 
 /* Version number of package */
-#define VERSION "2.1.0"
+#define VERSION "2.2.0"
 
 /* Define to 1 if the X Window System is missing or not being used. */
 #define X_DISPLAY_MISSING 1
