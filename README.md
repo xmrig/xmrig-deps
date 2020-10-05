@@ -1,12 +1,12 @@
 # XMRig dependencies
-[![Github All Releases](https://img.shields.io/github/downloads/xmrig/xmrig-deps/total.svg)](https://github.com/xmrig/xmrig-deps/releases)
-[![GitHub release](https://img.shields.io/github/release/xmrig/xmrig-deps/all.svg)](https://github.com/xmrig/xmrig-deps/releases)
-[![GitHub Release Date](https://img.shields.io/github/release-date-pre/xmrig/xmrig-deps.svg)](https://github.com/xmrig/xmrig-deps/releases)
-[![GitHub license](https://img.shields.io/github/license/xmrig/xmrig-deps.svg)](https://github.com/xmrig/xmrig-deps/blob/master/LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/xmrig/xmrig-deps.svg)](https://github.com/xmrig/xmrig-deps/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/xmrig/xmrig-deps.svg)](https://github.com/xmrig/xmrig-deps/network)
+[![Github All Releases](https://img.shields.io/github/downloads/xmrig/xmrig-deps/total.svg)](../../releases)
+[![GitHub release](https://img.shields.io/github/release/xmrig/xmrig-deps/all.svg)](../../releases/latest)
+[![GitHub Release Date](https://img.shields.io/github/release-date-pre/xmrig/xmrig-deps.svg)](../../releases/latest)
+[![GitHub license](https://img.shields.io/github/license/xmrig/xmrig-deps.svg)](./LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/xmrig/xmrig-deps.svg)](../../stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/xmrig/xmrig-deps.svg)](../../network)
 
-This repository only contains a binary build of XMRig dependencies. 
+This repository only contains a binary build of [XMRig](../../../xmrig) dependencies. 
 
 * [libuv](https://github.com/libuv/libuv) 1.42.0
 * [OpenSSL](https://www.openssl.org) 1.1.1l
