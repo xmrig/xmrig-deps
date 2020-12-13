@@ -140,7 +140,7 @@
 
 /* Define to 1 if you have the declaration of `sched_getcpu', and to 0 if you
    don't. */
-#define HAVE_DECL_SCHED_GETCPU 0
+/* #undef HAVE_DECL_SCHED_GETCPU */
 
 /* Define to 1 if you have the declaration of `snprintf', and to 0 if you
    don't. */
@@ -334,6 +334,9 @@
 /* Define to 1 if the system has the type `RelationProcessorPackage'. */
 /* #undef HAVE_RELATIONPROCESSORPACKAGE */
 
+/* Define to 1 if you have the <rocm_smi/rocm_smi.h> header file. */
+/* #undef HAVE_ROCM_SMI_ROCM_SMI_H */
+
 /* Define to 1 if you have the `setlocale' function. */
 #define HAVE_SETLOCALE 1
 
@@ -398,6 +401,9 @@
 
 /* Define to 1 if you have the <sys/sysctl.h> header file. */
 /* #undef HAVE_SYS_SYSCTL_H */
+
+/* Define to 1 if you have the <sys/thr.h> header file. */
+/* #undef HAVE_SYS_THR_H */
 
 /* Define to 1 if you have the <sys/types.h> header file. */
 #define HAVE_SYS_TYPES_H 1
@@ -625,6 +631,9 @@
 /* Define to 1 if pthread mutexes are available */
 #define HWLOC_HAVE_PTHREAD_MUTEX 1
 
+/* Define to 1 if you have the `RSMI' library. */
+/* #undef HWLOC_HAVE_RSMI */
+
 /* Define to 1 if glibc provides a prototype of sched_setaffinity() */
 /* #undef HWLOC_HAVE_SCHED_SETAFFINITY */
 
@@ -681,7 +690,7 @@
 
 /* The library version, always available, even in embedded mode, contrary to
    VERSION */
-#define HWLOC_VERSION "2.2.0"
+#define HWLOC_VERSION "2.4.0"
 
 /* The library version optional greek suffix string */
 #define HWLOC_VERSION_GREEK ""
@@ -690,7 +699,7 @@
 #define HWLOC_VERSION_MAJOR 2
 
 /* The library version minor number */
-#define HWLOC_VERSION_MINOR 2
+#define HWLOC_VERSION_MINOR 4
 
 /* The library version release number */
 #define HWLOC_VERSION_RELEASE 0
@@ -717,13 +726,13 @@
 #define PACKAGE "hwloc"
 
 /* Define to the address where bug reports for this package should be sent. */
-#define PACKAGE_BUGREPORT "http://github.com/open-mpi/hwloc/issues"
+#define PACKAGE_BUGREPORT "https://github.com/open-mpi/hwloc/issues"
 
 /* Define to the full name of this package. */
 #define PACKAGE_NAME "hwloc"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "hwloc 2.2.0"
+#define PACKAGE_STRING "hwloc 2.4.0"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "hwloc"
@@ -732,7 +741,7 @@
 #define PACKAGE_URL ""
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "2.2.0"
+#define PACKAGE_VERSION "2.4.0"
 
 /* The size of `unsigned int', as computed by sizeof. */
 #define SIZEOF_UNSIGNED_INT 4
@@ -775,7 +784,7 @@
 
 
 /* Version number of package */
-#define VERSION "2.2.0"
+#define VERSION "2.4.0"
 
 /* Define to 1 if the X Window System is missing or not being used. */
 #define X_DISPLAY_MISSING 1
