@@ -690,7 +690,7 @@
 
 /* The library version, always available, even in embedded mode, contrary to
    VERSION */
-#define HWLOC_VERSION "2.4.0"
+#define HWLOC_VERSION "2.4.1"
 
 /* The library version optional greek suffix string */
 #define HWLOC_VERSION_GREEK ""
@@ -702,7 +702,7 @@
 #define HWLOC_VERSION_MINOR 4
 
 /* The library version release number */
-#define HWLOC_VERSION_RELEASE 0
+#define HWLOC_VERSION_RELEASE 1
 
 /* Define to 1 on WINDOWS */
 #define HWLOC_WIN_SYS 1
@@ -732,7 +732,7 @@
 #define PACKAGE_NAME "hwloc"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "hwloc 2.4.0"
+#define PACKAGE_STRING "hwloc 2.4.1"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "hwloc"
@@ -741,7 +741,7 @@
 #define PACKAGE_URL ""
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "2.4.0"
+#define PACKAGE_VERSION "2.4.1"
 
 /* The size of `unsigned int', as computed by sizeof. */
 #define SIZEOF_UNSIGNED_INT 4
@@ -784,7 +784,7 @@
 
 
 /* Version number of package */
-#define VERSION "2.4.0"
+#define VERSION "2.4.1"
 
 /* Define to 1 if the X Window System is missing or not being used. */
 #define X_DISPLAY_MISSING 1
