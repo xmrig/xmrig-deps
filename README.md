@@ -8,9 +8,9 @@
 
 This repository only contains a binary build of XMRig dependencies. 
 
-* [libuv](https://github.com/libuv/libuv) 1.41.0
-* [OpenSSL](https://www.openssl.org) 1.1.1k
-* [hwloc](https://www.open-mpi.org/projects/hwloc) 2.4.1
+* [libuv](https://github.com/libuv/libuv) 1.42.0
+* [OpenSSL](https://www.openssl.org) 1.1.1l
+* [hwloc](https://www.open-mpi.org/projects/hwloc) 2.5.0
 
 Only **gcc/x86** with older lib versions supports Windows XP/2003.
 
