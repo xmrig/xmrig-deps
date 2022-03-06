@@ -383,10 +383,6 @@
 /* #undef HAVE_SYSCTLBYNAME */
 
 /* Define to 1 if the system has the type
-   `SYSTEM_LOGICAL_PROCESSOR_INFORMATION'. */
-#define HAVE_SYSTEM_LOGICAL_PROCESSOR_INFORMATION 1
-
-/* Define to 1 if the system has the type
    `SYSTEM_LOGICAL_PROCESSOR_INFORMATION_EX'. */
 #define HAVE_SYSTEM_LOGICAL_PROCESSOR_INFORMATION_EX 1
 
@@ -562,6 +558,12 @@
 /* Define to 1 if you have the `cudart' SDK. */
 /* #undef HWLOC_HAVE_CUDART */
 
+/* `Define to 1 if you have the Foundation Darwin framework' */
+/* #undef HWLOC_HAVE_DARWIN_FOUNDATION */
+
+/* `Define to 1 if you have the IOKit Darwin framework' */
+/* #undef HWLOC_HAVE_DARWIN_IOKIT */
+
 /* Define to 1 if function `clz' is declared by system headers */
 /* #undef HWLOC_HAVE_DECL_CLZ */
 
@@ -708,7 +710,7 @@
 
 /* The library version, always available, even in embedded mode, contrary to
    VERSION */
-#define HWLOC_VERSION "2.5.0"
+#define HWLOC_VERSION "2.7.0"
 
 /* The library version optional greek suffix string */
 #define HWLOC_VERSION_GREEK ""
@@ -717,7 +719,7 @@
 #define HWLOC_VERSION_MAJOR 2
 
 /* The library version minor number */
-#define HWLOC_VERSION_MINOR 5
+#define HWLOC_VERSION_MINOR 7
 
 /* The library version release number */
 #define HWLOC_VERSION_RELEASE 0
@@ -750,7 +752,7 @@
 #define PACKAGE_NAME "hwloc"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "hwloc 2.5.0"
+#define PACKAGE_STRING "hwloc 2.7.0"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "hwloc"
@@ -759,7 +761,7 @@
 #define PACKAGE_URL ""
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "2.5.0"
+#define PACKAGE_VERSION "2.7.0"
 
 /* The size of `unsigned int', as computed by sizeof. */
 #define SIZEOF_UNSIGNED_INT 4
@@ -870,7 +872,7 @@
 
 
 /* Version number of package */
-#define VERSION "2.5.0"
+#define VERSION "2.7.0"
 
 /* Define to 1 if the X Window System is missing or not being used. */
 #define X_DISPLAY_MISSING 1
