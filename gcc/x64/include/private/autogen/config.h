@@ -5,6 +5,7 @@
  *
  * Copyright © 2009, 2011, 2012 CNRS, inria., Université Bordeaux  All rights reserved.
  * Copyright © 2009-2014 Cisco Systems, Inc.  All rights reserved.
+ * Copyright © 2022 IBM Corporation.  All rights reserved.
  * $COPYRIGHT$
  *
  * Additional copyrights may follow
@@ -458,6 +459,9 @@
 /* Define to 1 on BlueGene/Q */
 /* #undef HWLOC_BGQ_SYS */
 
+/* Define if the CUDA component is built statically inside libhwloc */
+/* #undef HWLOC_CUDA_COMPONENT_BUILTIN */
+
 /* Whether C compiler supports symbol visibility or not */
 #define HWLOC_C_HAVE_VISIBILITY 0
 
@@ -469,6 +473,9 @@
 
 /* Define to 1 on *FREEBSD */
 /* #undef HWLOC_FREEBSD_SYS */
+
+/* Define if the GL component is built statically inside libhwloc */
+/* #undef HWLOC_GL_COMPONENT_BUILTIN */
 
 /* Define to 1 if --enable-32bits-pci-domain is called. */
 /* #undef HWLOC_HAVE_32BITS_PCI_DOMAIN */
@@ -678,11 +685,26 @@
 /* Define to 1 on Irix */
 /* #undef HWLOC_IRIX_SYS */
 
+/* Define if the LevelZero component is built statically inside libhwloc */
+/* #undef HWLOC_LEVELZERO_COMPONENT_BUILTIN */
+
 /* Define to 1 on Linux */
 /* #undef HWLOC_LINUX_SYS */
 
 /* Define to 1 on *NETBSD */
 /* #undef HWLOC_NETBSD_SYS */
+
+/* Define if the NVML component is built statically inside libhwloc */
+/* #undef HWLOC_NVML_COMPONENT_BUILTIN */
+
+/* Define if the OpenCL component is built statically inside libhwloc */
+/* #undef HWLOC_OPENCL_COMPONENT_BUILTIN */
+
+/* Define if the PCI component is built statically inside libhwloc */
+/* #undef HWLOC_PCI_COMPONENT_BUILTIN */
+
+/* Define if the RSMI component is built statically inside libhwloc */
+/* #undef HWLOC_RSMI_COMPONENT_BUILTIN */
 
 /* The size of `unsigned int', as computed by sizeof */
 #define HWLOC_SIZEOF_UNSIGNED_INT 4
@@ -710,7 +732,7 @@
 
 /* The library version, always available, even in embedded mode, contrary to
    VERSION */
-#define HWLOC_VERSION "2.7.0"
+#define HWLOC_VERSION "2.7.1"
 
 /* The library version optional greek suffix string */
 #define HWLOC_VERSION_GREEK ""
@@ -722,7 +744,7 @@
 #define HWLOC_VERSION_MINOR 7
 
 /* The library version release number */
-#define HWLOC_VERSION_RELEASE 0
+#define HWLOC_VERSION_RELEASE 1
 
 /* Define to 1 on WINDOWS */
 #define HWLOC_WIN_SYS 1
@@ -732,6 +754,9 @@
 
 /* Define to 1 on x86_64 */
 #define HWLOC_X86_64_ARCH 1
+
+/* Define if the libxml XML component is built statically inside libhwloc */
+/* #undef HWLOC_XML_LIBXML_COMPONENT_BUILTIN */
 
 /* Define if lstopo Cairo/X11 interactive graphical output is supported */
 /* #undef LSTOPO_HAVE_X11 */
@@ -752,7 +777,7 @@
 #define PACKAGE_NAME "hwloc"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "hwloc 2.7.0"
+#define PACKAGE_STRING "hwloc 2.7.1"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "hwloc"
@@ -761,7 +786,7 @@
 #define PACKAGE_URL ""
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "2.7.0"
+#define PACKAGE_VERSION "2.7.1"
 
 /* The size of `unsigned int', as computed by sizeof. */
 #define SIZEOF_UNSIGNED_INT 4
@@ -872,7 +897,7 @@
 
 
 /* Version number of package */
-#define VERSION "2.7.0"
+#define VERSION "2.7.1"
 
 /* Define to 1 if the X Window System is missing or not being used. */
 #define X_DISPLAY_MISSING 1
