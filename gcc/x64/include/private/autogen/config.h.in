@@ -222,6 +222,9 @@
 /* Define to 1 if you have the <inttypes.h> header file. */
 #undef HAVE_INTTYPES_H
 
+/* Define to 1 if you have the `isatty' function. */
+#undef HAVE_ISATTY
+
 /* Define to 1 if the system has the type `KAFFINITY'. */
 #undef HAVE_KAFFINITY
 
@@ -416,6 +419,9 @@
 /* Define to 1 if you have the <sys/utsname.h> header file. */
 #undef HAVE_SYS_UTSNAME_H
 
+/* Define to 1 if you have the `tcgetpgrp' function. */
+#undef HAVE_TCGETPGRP
+
 /* Define to 1 if you have the <time.h> header file. */
 #undef HAVE_TIME_H
 
@@ -454,6 +460,9 @@
 
 /* Define to 1 on AIX */
 #undef HWLOC_AIX_SYS
+
+/* Define to the location of the archivemount program */
+#undef HWLOC_ARCHIVEMOUNT_PATH
 
 /* Define to 1 on BlueGene/Q */
 #undef HWLOC_BGQ_SYS
@@ -677,6 +686,9 @@
 
 /* Define to 1 if you have x86 cpuid */
 #undef HWLOC_HAVE_X86_CPUID
+
+/* Define to 1 if zeDevicePciGetPropertiesExt is available */
+#undef HWLOC_HAVE_ZEDEVICEPCIGETPROPERTIESEXT
 
 /* Define to 1 on HP-UX */
 #undef HWLOC_HPUX_SYS

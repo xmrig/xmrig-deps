@@ -223,6 +223,9 @@
 /* Define to 1 if you have the <inttypes.h> header file. */
 #define HAVE_INTTYPES_H 1
 
+/* Define to 1 if you have the `isatty' function. */
+#define HAVE_ISATTY 1
+
 /* Define to 1 if the system has the type `KAFFINITY'. */
 #define HAVE_KAFFINITY 1
 
@@ -417,6 +420,9 @@
 /* Define to 1 if you have the <sys/utsname.h> header file. */
 /* #undef HAVE_SYS_UTSNAME_H */
 
+/* Define to 1 if you have the `tcgetpgrp' function. */
+/* #undef HAVE_TCGETPGRP */
+
 /* Define to 1 if you have the <time.h> header file. */
 #define HAVE_TIME_H 1
 
@@ -455,6 +461,9 @@
 
 /* Define to 1 on AIX */
 /* #undef HWLOC_AIX_SYS */
+
+/* Define to the location of the archivemount program */
+/* #undef HWLOC_ARCHIVEMOUNT_PATH */
 
 /* Define to 1 on BlueGene/Q */
 /* #undef HWLOC_BGQ_SYS */
@@ -679,6 +688,9 @@
 /* Define to 1 if you have x86 cpuid */
 #define HWLOC_HAVE_X86_CPUID 1
 
+/* Define to 1 if zeDevicePciGetPropertiesExt is available */
+/* #undef HWLOC_HAVE_ZEDEVICEPCIGETPROPERTIESEXT */
+
 /* Define to 1 on HP-UX */
 /* #undef HWLOC_HPUX_SYS */
 
@@ -732,7 +744,7 @@
 
 /* The library version, always available, even in embedded mode, contrary to
    VERSION */
-#define HWLOC_VERSION "2.7.1"
+#define HWLOC_VERSION "2.9.0"
 
 /* The library version optional greek suffix string */
 #define HWLOC_VERSION_GREEK ""
@@ -741,10 +753,10 @@
 #define HWLOC_VERSION_MAJOR 2
 
 /* The library version minor number */
-#define HWLOC_VERSION_MINOR 7
+#define HWLOC_VERSION_MINOR 9
 
 /* The library version release number */
-#define HWLOC_VERSION_RELEASE 1
+#define HWLOC_VERSION_RELEASE 0
 
 /* Define to 1 on WINDOWS */
 #define HWLOC_WIN_SYS 1
@@ -777,7 +789,7 @@
 #define PACKAGE_NAME "hwloc"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "hwloc 2.7.1"
+#define PACKAGE_STRING "hwloc 2.9.0"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "hwloc"
@@ -786,7 +798,7 @@
 #define PACKAGE_URL ""
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "2.7.1"
+#define PACKAGE_VERSION "2.9.0"
 
 /* The size of `unsigned int', as computed by sizeof. */
 #define SIZEOF_UNSIGNED_INT 4
@@ -897,7 +909,7 @@
 
 
 /* Version number of package */
-#define VERSION "2.7.1"
+#define VERSION "2.9.0"
 
 /* Define to 1 if the X Window System is missing or not being used. */
 #define X_DISPLAY_MISSING 1
