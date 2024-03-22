@@ -282,9 +282,6 @@
 /* Define to 1 if you have the `mkstemp' function. */
 #undef HAVE_MKSTEMP
 
-/* Define to 1 if you have the <mpi.h> header file. */
-#undef HAVE_MPI_H
-
 /* Define to 1 if you have the `nl_langinfo' function. */
 #undef HAVE_NL_LANGINFO
 
@@ -460,9 +457,6 @@
 
 /* Define to 1 on AIX */
 #undef HWLOC_AIX_SYS
-
-/* Define to the location of the archivemount program */
-#undef HWLOC_ARCHIVEMOUNT_PATH
 
 /* Define to 1 on BlueGene/Q */
 #undef HWLOC_BGQ_SYS
@@ -690,6 +684,9 @@
 /* Define to 1 if zeDevicePciGetPropertiesExt is available */
 #undef HWLOC_HAVE_ZEDEVICEPCIGETPROPERTIESEXT
 
+/* Define to 1 if zesInit is available */
+#undef HWLOC_HAVE_ZESINIT
+
 /* Define to 1 on HP-UX */
 #undef HWLOC_HPUX_SYS
 
@@ -774,9 +771,6 @@
 
 /* Define to the sub-directory where libtool stores uninstalled libraries. */
 #undef LT_OBJDIR
-
-/* Define to 1 if scotch is netlocscotch is enabled */
-#undef NETLOC_SCOTCH
 
 /* Name of package */
 #undef PACKAGE

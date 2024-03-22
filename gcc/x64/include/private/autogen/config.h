@@ -283,9 +283,6 @@
 /* Define to 1 if you have the `mkstemp' function. */
 #define HAVE_MKSTEMP 1
 
-/* Define to 1 if you have the <mpi.h> header file. */
-/* #undef HAVE_MPI_H */
-
 /* Define to 1 if you have the `nl_langinfo' function. */
 /* #undef HAVE_NL_LANGINFO */
 
@@ -461,9 +458,6 @@
 
 /* Define to 1 on AIX */
 /* #undef HWLOC_AIX_SYS */
-
-/* Define to the location of the archivemount program */
-/* #undef HWLOC_ARCHIVEMOUNT_PATH */
 
 /* Define to 1 on BlueGene/Q */
 /* #undef HWLOC_BGQ_SYS */
@@ -691,6 +685,9 @@
 /* Define to 1 if zeDevicePciGetPropertiesExt is available */
 /* #undef HWLOC_HAVE_ZEDEVICEPCIGETPROPERTIESEXT */
 
+/* Define to 1 if zesInit is available */
+/* #undef HWLOC_HAVE_ZESINIT */
+
 /* Define to 1 on HP-UX */
 /* #undef HWLOC_HPUX_SYS */
 
@@ -744,7 +741,7 @@
 
 /* The library version, always available, even in embedded mode, contrary to
    VERSION */
-#define HWLOC_VERSION "2.9.0"
+#define HWLOC_VERSION "2.10.0"
 
 /* The library version optional greek suffix string */
 #define HWLOC_VERSION_GREEK ""
@@ -753,7 +750,7 @@
 #define HWLOC_VERSION_MAJOR 2
 
 /* The library version minor number */
-#define HWLOC_VERSION_MINOR 9
+#define HWLOC_VERSION_MINOR 10
 
 /* The library version release number */
 #define HWLOC_VERSION_RELEASE 0
@@ -776,9 +773,6 @@
 /* Define to the sub-directory where libtool stores uninstalled libraries. */
 #define LT_OBJDIR ".libs/"
 
-/* Define to 1 if scotch is netlocscotch is enabled */
-/* #undef NETLOC_SCOTCH */
-
 /* Name of package */
 #define PACKAGE "hwloc"
 
@@ -789,7 +783,7 @@
 #define PACKAGE_NAME "hwloc"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "hwloc 2.9.0"
+#define PACKAGE_STRING "hwloc 2.10.0"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "hwloc"
@@ -798,7 +792,7 @@
 #define PACKAGE_URL ""
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "2.9.0"
+#define PACKAGE_VERSION "2.10.0"
 
 /* The size of `unsigned int', as computed by sizeof. */
 #define SIZEOF_UNSIGNED_INT 4
@@ -909,7 +903,7 @@
 
 
 /* Version number of package */
-#define VERSION "2.9.0"
+#define VERSION "2.10.0"
 
 /* Define to 1 if the X Window System is missing or not being used. */
 #define X_DISPLAY_MISSING 1
