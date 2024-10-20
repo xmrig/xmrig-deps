@@ -20,28 +20,28 @@
 #define HWLOC_CONFIGURE_H
 
 
-/* Define to 1 if the system has the type `CACHE_DESCRIPTOR'. */
+/* Define to 1 if the system has the type 'CACHE_DESCRIPTOR'. */
 #define HAVE_CACHE_DESCRIPTOR 1
 
-/* Define to 1 if the system has the type `CACHE_RELATIONSHIP'. */
+/* Define to 1 if the system has the type 'CACHE_RELATIONSHIP'. */
 #define HAVE_CACHE_RELATIONSHIP 1
 
-/* Define to 1 if you have the `clock_gettime' function. */
+/* Define to 1 if you have the 'clock_gettime' function. */
 #define HAVE_CLOCK_GETTIME 1
 
-/* Define to 1 if you have the `clz' function. */
+/* Define to 1 if you have the 'clz' function. */
 /* #undef HAVE_CLZ */
 
-/* Define to 1 if you have the `clzl' function. */
+/* Define to 1 if you have the 'clzl' function. */
 /* #undef HAVE_CLZL */
 
 /* Define to 1 if you have the <CL/cl_ext.h> header file. */
 /* #undef HAVE_CL_CL_EXT_H */
 
-/* Define to 1 if you have the `cpuset_setaffinity' function. */
+/* Define to 1 if you have the 'cpuset_setaffinity' function. */
 /* #undef HAVE_CPUSET_SETAFFINITY */
 
-/* Define to 1 if you have the `cpuset_setid' function. */
+/* Define to 1 if you have the 'cpuset_setid' function. */
 /* #undef HAVE_CPUSET_SETID */
 
 /* Define to 1 if you have the <ctype.h> header file. */
@@ -56,134 +56,138 @@
 /* Define to 1 if you have the <cuda_runtime_api.h> header file. */
 /* #undef HAVE_CUDA_RUNTIME_API_H */
 
-/* Define to 1 if you have the declaration of `bind', and to 0 if you don't.
+/* Define to 1 if you have the declaration of 'bind', and to 0 if you don't.
    */
 #define HAVE_DECL_BIND 0
 
-/* Define to 1 if you have the declaration of `CTL_HW', and to 0 if you don't.
+/* Define to 1 if you have the declaration of 'CTL_HW', and to 0 if you don't.
    */
 /* #undef HAVE_DECL_CTL_HW */
 
-/* Define to 1 if you have the declaration of `fabsf', and to 0 if you don't.
+/* Define to 1 if you have the declaration of 'fabsf', and to 0 if you don't.
    */
 #define HAVE_DECL_FABSF 1
 
-/* Define to 1 if you have the declaration of `getexecname', and to 0 if you
+/* Define to 1 if you have the declaration of 'getexecname', and to 0 if you
    don't. */
 #define HAVE_DECL_GETEXECNAME 0
 
-/* Define to 1 if you have the declaration of `GetModuleFileName', and to 0 if
+/* Define to 1 if you have the declaration of 'GetModuleFileName', and to 0 if
    you don't. */
 #define HAVE_DECL_GETMODULEFILENAME 1
 
-/* Define to 1 if you have the declaration of `getprogname', and to 0 if you
+/* Define to 1 if you have the declaration of 'getprogname', and to 0 if you
    don't. */
 #define HAVE_DECL_GETPROGNAME 0
 
-/* Define to 1 if you have the declaration of `HW_MEMSIZE', and to 0 if you
+/* Define to 1 if you have the declaration of 'HW_MEMSIZE', and to 0 if you
    don't. */
 /* #undef HAVE_DECL_HW_MEMSIZE */
 
-/* Define to 1 if you have the declaration of `HW_MEMSIZE64', and to 0 if you
+/* Define to 1 if you have the declaration of 'HW_MEMSIZE64', and to 0 if you
    don't. */
 /* #undef HAVE_DECL_HW_MEMSIZE64 */
 
-/* Define to 1 if you have the declaration of `HW_NCPU', and to 0 if you
+/* Define to 1 if you have the declaration of 'HW_NCPU', and to 0 if you
    don't. */
 /* #undef HAVE_DECL_HW_NCPU */
 
-/* Define to 1 if you have the declaration of `HW_PHYSMEM', and to 0 if you
+/* Define to 1 if you have the declaration of 'HW_PHYSMEM', and to 0 if you
    don't. */
 /* #undef HAVE_DECL_HW_PHYSMEM */
 
-/* Define to 1 if you have the declaration of `HW_PHYSMEM64', and to 0 if you
+/* Define to 1 if you have the declaration of 'HW_PHYSMEM64', and to 0 if you
    don't. */
 /* #undef HAVE_DECL_HW_PHYSMEM64 */
 
-/* Define to 1 if you have the declaration of `HW_REALMEM', and to 0 if you
+/* Define to 1 if you have the declaration of 'HW_REALMEM', and to 0 if you
    don't. */
 /* #undef HAVE_DECL_HW_REALMEM */
 
-/* Define to 1 if you have the declaration of `HW_REALMEM64', and to 0 if you
+/* Define to 1 if you have the declaration of 'HW_REALMEM64', and to 0 if you
    don't. */
 /* #undef HAVE_DECL_HW_REALMEM64 */
 
-/* Define to 1 if you have the declaration of `HW_USERMEM', and to 0 if you
+/* Define to 1 if you have the declaration of 'HW_USERMEM', and to 0 if you
    don't. */
 /* #undef HAVE_DECL_HW_USERMEM */
 
-/* Define to 1 if you have the declaration of `HW_USERMEM64', and to 0 if you
+/* Define to 1 if you have the declaration of 'HW_USERMEM64', and to 0 if you
    don't. */
 /* #undef HAVE_DECL_HW_USERMEM64 */
 
-/* Define to 1 if you have the declaration of `lgrp_latency_cookie', and to 0
+/* Define to 1 if you have the declaration of 'lgrp_latency_cookie', and to 0
    if you don't. */
 /* #undef HAVE_DECL_LGRP_LATENCY_COOKIE */
 
-/* Define to 1 if you have the declaration of `modff', and to 0 if you don't.
+/* Define to 1 if you have the declaration of 'modff', and to 0 if you don't.
    */
 #define HAVE_DECL_MODFF 1
 
 /* Define to 1 if you have the declaration of
-   `nvmlDeviceGetMaxPcieLinkGeneration', and to 0 if you don't. */
-/* #undef HAVE_DECL_NVMLDEVICEGETMAXPCIELINKGENERATION */
+   'nvmlDeviceGetCurrPcieLinkGeneration', and to 0 if you don't. */
+/* #undef HAVE_DECL_NVMLDEVICEGETCURRPCIELINKGENERATION */
 
-/* Define to 1 if you have the declaration of `pthread_getaffinity_np', and to
+/* Define to 1 if you have the declaration of
+   'nvmlDeviceGetNvLinkRemoteDeviceType', and to 0 if you don't. */
+/* #undef HAVE_DECL_NVMLDEVICEGETNVLINKREMOTEDEVICETYPE */
+
+/* Define to 1 if you have the declaration of 'pthread_getaffinity_np', and to
    0 if you don't. */
 #define HAVE_DECL_PTHREAD_GETAFFINITY_NP 0
 
-/* Define to 1 if you have the declaration of `pthread_setaffinity_np', and to
+/* Define to 1 if you have the declaration of 'pthread_setaffinity_np', and to
    0 if you don't. */
 #define HAVE_DECL_PTHREAD_SETAFFINITY_NP 0
 
 /* Embedded mode; just assume we do not have Valgrind support */
 #define HAVE_DECL_RUNNING_ON_VALGRIND 0
 
-/* Define to 1 if you have the declaration of `sched_getcpu', and to 0 if you
+/* Define to 1 if you have the declaration of 'sched_getcpu', and to 0 if you
    don't. */
 /* #undef HAVE_DECL_SCHED_GETCPU */
 
-/* Define to 1 if you have the declaration of `snprintf', and to 0 if you
+/* Define to 1 if you have the declaration of 'snprintf', and to 0 if you
    don't. */
 #define HAVE_DECL_SNPRINTF 1
 
-/* Define to 1 if you have the declaration of `strtoull', and to 0 if you
+/* Define to 1 if you have the declaration of 'strtoull', and to 0 if you
    don't. */
 #define HAVE_DECL_STRTOULL 1
 
-/* Define to 1 if you have the declaration of `_putenv', and to 0 if you
+/* Define to 1 if you have the declaration of '_putenv', and to 0 if you
    don't. */
 #define HAVE_DECL__PUTENV 1
 
-/* Define to 1 if you have the declaration of `_SC_LARGE_PAGESIZE', and to 0
+/* Define to 1 if you have the declaration of '_SC_LARGE_PAGESIZE', and to 0
    if you don't. */
 #define HAVE_DECL__SC_LARGE_PAGESIZE 0
 
-/* Define to 1 if you have the declaration of `_SC_NPROCESSORS_CONF', and to 0
+/* Define to 1 if you have the declaration of '_SC_NPROCESSORS_CONF', and to 0
    if you don't. */
 #define HAVE_DECL__SC_NPROCESSORS_CONF 0
 
-/* Define to 1 if you have the declaration of `_SC_NPROCESSORS_ONLN', and to 0
+/* Define to 1 if you have the declaration of '_SC_NPROCESSORS_ONLN', and to 0
    if you don't. */
 #define HAVE_DECL__SC_NPROCESSORS_ONLN 0
 
-/* Define to 1 if you have the declaration of `_SC_NPROC_CONF', and to 0 if
+/* Define to 1 if you have the declaration of '_SC_NPROC_CONF', and to 0 if
    you don't. */
 #define HAVE_DECL__SC_NPROC_CONF 0
 
-/* Define to 1 if you have the declaration of `_SC_NPROC_ONLN', and to 0 if
+/* Define to 1 if you have the declaration of '_SC_NPROC_ONLN', and to 0 if
    you don't. */
 #define HAVE_DECL__SC_NPROC_ONLN 0
 
-/* Define to 1 if you have the declaration of `_SC_PAGESIZE', and to 0 if you
+/* Define to 1 if you have the declaration of '_SC_PAGESIZE', and to 0 if you
    don't. */
 #define HAVE_DECL__SC_PAGESIZE 0
 
-/* Define to 1 if you have the declaration of `_SC_PAGE_SIZE', and to 0 if you
+/* Define to 1 if you have the declaration of '_SC_PAGE_SIZE', and to 0 if you
    don't. */
 #define HAVE_DECL__SC_PAGE_SIZE 0
 
-/* Define to 1 if you have the declaration of `_strdup', and to 0 if you
+/* Define to 1 if you have the declaration of '_strdup', and to 0 if you
    don't. */
 #define HAVE_DECL__STRDUP 1
 
@@ -193,28 +197,28 @@
 /* Define to 1 if you have the <dlfcn.h> header file. */
 /* #undef HAVE_DLFCN_H */
 
-/* Define to 1 if you have the `ffs' function. */
+/* Define to 1 if you have the 'ffs' function. */
 /* #undef HAVE_FFS */
 
-/* Define to 1 if you have the `ffsl' function. */
+/* Define to 1 if you have the 'ffsl' function. */
 /* #undef HAVE_FFSL */
 
-/* Define to 1 if you have the `fls' function. */
+/* Define to 1 if you have the 'fls' function. */
 /* #undef HAVE_FLS */
 
-/* Define to 1 if you have the `flsl' function. */
+/* Define to 1 if you have the 'flsl' function. */
 /* #undef HAVE_FLSL */
 
-/* Define to 1 if you have the `getpagesize' function. */
+/* Define to 1 if you have the 'getpagesize' function. */
 #define HAVE_GETPAGESIZE 1
 
-/* Define to 1 if the system has the type `GROUP_AFFINITY'. */
+/* Define to 1 if the system has the type 'GROUP_AFFINITY'. */
 #define HAVE_GROUP_AFFINITY 1
 
-/* Define to 1 if the system has the type `GROUP_RELATIONSHIP'. */
+/* Define to 1 if the system has the type 'GROUP_RELATIONSHIP'. */
 #define HAVE_GROUP_RELATIONSHIP 1
 
-/* Define to 1 if you have the `host_info' function. */
+/* Define to 1 if you have the 'host_info' function. */
 /* #undef HAVE_HOST_INFO */
 
 /* Define to 1 if you have the <infiniband/verbs.h> header file. */
@@ -223,10 +227,10 @@
 /* Define to 1 if you have the <inttypes.h> header file. */
 #define HAVE_INTTYPES_H 1
 
-/* Define to 1 if you have the `isatty' function. */
+/* Define to 1 if you have the 'isatty' function. */
 #define HAVE_ISATTY 1
 
-/* Define to 1 if the system has the type `KAFFINITY'. */
+/* Define to 1 if the system has the type 'KAFFINITY'. */
 #define HAVE_KAFFINITY 1
 
 /* Define to 1 if you have the <kstat.h> header file. */
@@ -259,7 +263,7 @@
 /* Define to 1 if you have the <locale.h> header file. */
 #define HAVE_LOCALE_H 1
 
-/* Define to 1 if the system has the type `LOGICAL_PROCESSOR_RELATIONSHIP'. */
+/* Define to 1 if the system has the type 'LOGICAL_PROCESSOR_RELATIONSHIP'. */
 #define HAVE_LOGICAL_PROCESSOR_RELATIONSHIP 1
 
 /* Define to 1 if you have the <mach_init.h> header file. */
@@ -274,19 +278,19 @@
 /* Define to 1 if you have the <malloc.h> header file. */
 #define HAVE_MALLOC_H 1
 
-/* Define to 1 if you have the `memalign' function. */
+/* Define to 1 if you have the 'memalign' function. */
 /* #undef HAVE_MEMALIGN */
 
 /* Define to 1 if you have the <minix/config.h> header file. */
 /* #undef HAVE_MINIX_CONFIG_H */
 
-/* Define to 1 if you have the `mkstemp' function. */
+/* Define to 1 if you have the 'mkstemp' function. */
 #define HAVE_MKSTEMP 1
 
-/* Define to 1 if you have the `nl_langinfo' function. */
+/* Define to 1 if you have the 'nl_langinfo' function. */
 /* #undef HAVE_NL_LANGINFO */
 
-/* Define to 1 if the system has the type `NUMA_NODE_RELATIONSHIP'. */
+/* Define to 1 if the system has the type 'NUMA_NODE_RELATIONSHIP'. */
 #define HAVE_NUMA_NODE_RELATIONSHIP 1
 
 /* Define to 1 if you have the <NVCtrl/NVCtrl.h> header file. */
@@ -295,7 +299,7 @@
 /* Define to 1 if you have the <nvml.h> header file. */
 /* #undef HAVE_NVML_H */
 
-/* Define to 1 if you have the `openat' function. */
+/* Define to 1 if you have the 'openat' function. */
 /* #undef HAVE_OPENAT */
 
 /* Define to 1 if you have the <OpenCL/cl_ext.h> header file. */
@@ -304,50 +308,50 @@
 /* Define to 1 if you have the <picl.h> header file. */
 /* #undef HAVE_PICL_H */
 
-/* Define to 1 if you have the `posix_memalign' function. */
+/* Define to 1 if you have the 'posix_memalign' function. */
 /* #undef HAVE_POSIX_MEMALIGN */
 
-/* Define to 1 if the system has the type `PROCESSOR_CACHE_TYPE'. */
+/* Define to 1 if the system has the type 'PROCESSOR_CACHE_TYPE'. */
 #define HAVE_PROCESSOR_CACHE_TYPE 1
 
-/* Define to 1 if the system has the type `PROCESSOR_GROUP_INFO'. */
+/* Define to 1 if the system has the type 'PROCESSOR_GROUP_INFO'. */
 #define HAVE_PROCESSOR_GROUP_INFO 1
 
-/* Define to 1 if the system has the type `PROCESSOR_NUMBER'. */
+/* Define to 1 if the system has the type 'PROCESSOR_NUMBER'. */
 #define HAVE_PROCESSOR_NUMBER 1
 
-/* Define to 1 if the system has the type `PROCESSOR_RELATIONSHIP'. */
+/* Define to 1 if the system has the type 'PROCESSOR_RELATIONSHIP'. */
 #define HAVE_PROCESSOR_RELATIONSHIP 1
 
 /* Define to '1' if program_invocation_name is present and usable */
 /* #undef HAVE_PROGRAM_INVOCATION_NAME */
 
-/* Define to 1 if the system has the type `PSAPI_WORKING_SET_EX_BLOCK'. */
+/* Define to 1 if the system has the type 'PSAPI_WORKING_SET_EX_BLOCK'. */
 /* #undef HAVE_PSAPI_WORKING_SET_EX_BLOCK */
 
-/* Define to 1 if the system has the type `PSAPI_WORKING_SET_EX_INFORMATION'.
+/* Define to 1 if the system has the type 'PSAPI_WORKING_SET_EX_INFORMATION'.
    */
 /* #undef HAVE_PSAPI_WORKING_SET_EX_INFORMATION */
 
 /* Define to 1 if you have the <pthread_np.h> header file. */
 /* #undef HAVE_PTHREAD_NP_H */
 
-/* Define to 1 if the system has the type `pthread_t'. */
+/* Define to 1 if the system has the type 'pthread_t'. */
 /* #undef HAVE_PTHREAD_T */
 
-/* Define to 1 if you have the `putwc' function. */
+/* Define to 1 if you have the 'putwc' function. */
 #define HAVE_PUTWC 1
 
-/* Define to 1 if the system has the type `RelationProcessorPackage'. */
+/* Define to 1 if the system has the type 'RelationProcessorPackage'. */
 /* #undef HAVE_RELATIONPROCESSORPACKAGE */
 
 /* Define to 1 if you have the <rocm_smi/rocm_smi.h> header file. */
 /* #undef HAVE_ROCM_SMI_ROCM_SMI_H */
 
-/* Define to 1 if you have the `setlocale' function. */
+/* Define to 1 if you have the 'setlocale' function. */
 #define HAVE_SETLOCALE 1
 
-/* Define to 1 if the system has the type `ssize_t'. */
+/* Define to 1 if the system has the type 'ssize_t'. */
 #define HAVE_SSIZE_T 1
 
 /* Define to 1 if you have the <stdint.h> header file. */
@@ -359,10 +363,10 @@
 /* Define to 1 if you have the <stdlib.h> header file. */
 #define HAVE_STDLIB_H 1
 
-/* Define to 1 if you have the `strcasecmp' function. */
+/* Define to 1 if you have the 'strcasecmp' function. */
 #define HAVE_STRCASECMP 1
 
-/* Define to 1 if you have the `strftime' function. */
+/* Define to 1 if you have the 'strftime' function. */
 #define HAVE_STRFTIME 1
 
 /* Define to 1 if you have the <strings.h> header file. */
@@ -371,10 +375,10 @@
 /* Define to 1 if you have the <string.h> header file. */
 #define HAVE_STRING_H 1
 
-/* Define to 1 if you have the `strncasecmp' function. */
+/* Define to 1 if you have the 'strncasecmp' function. */
 #define HAVE_STRNCASECMP 1
 
-/* Define to 1 if you have the `strtoull' function. */
+/* Define to 1 if you have the 'strtoull' function. */
 /* #undef HAVE_STRTOULL */
 
 /* Define to '1' if sysctl is present and usable */
@@ -384,7 +388,7 @@
 /* #undef HAVE_SYSCTLBYNAME */
 
 /* Define to 1 if the system has the type
-   `SYSTEM_LOGICAL_PROCESSOR_INFORMATION_EX'. */
+   'SYSTEM_LOGICAL_PROCESSOR_INFORMATION_EX'. */
 #define HAVE_SYSTEM_LOGICAL_PROCESSOR_INFORMATION_EX 1
 
 /* Define to 1 if you have the <sys/cpuset.h> header file. */
@@ -417,19 +421,19 @@
 /* Define to 1 if you have the <sys/utsname.h> header file. */
 /* #undef HAVE_SYS_UTSNAME_H */
 
-/* Define to 1 if you have the `tcgetpgrp' function. */
+/* Define to 1 if you have the 'tcgetpgrp' function. */
 /* #undef HAVE_TCGETPGRP */
 
 /* Define to 1 if you have the <time.h> header file. */
 #define HAVE_TIME_H 1
 
-/* Define to 1 if you have the `uname' function. */
+/* Define to 1 if you have the 'uname' function. */
 /* #undef HAVE_UNAME */
 
 /* Define to 1 if you have the <unistd.h> header file. */
 #define HAVE_UNISTD_H 1
 
-/* Define to 1 if you have the `uselocale' function. */
+/* Define to 1 if you have the 'uselocale' function. */
 /* #undef HAVE_USELOCALE */
 
 /* Define to 1 if you have the <valgrind/valgrind.h> header file. */
@@ -438,7 +442,7 @@
 /* Define to 1 if you have the <wchar.h> header file. */
 #define HAVE_WCHAR_H 1
 
-/* Define to 1 if the system has the type `wchar_t'. */
+/* Define to 1 if the system has the type 'wchar_t'. */
 #define HAVE_WCHAR_T 1
 
 /* Define to 1 if you have the <X11/keysym.h> header file. */
@@ -741,7 +745,7 @@
 
 /* The library version, always available, even in embedded mode, contrary to
    VERSION */
-#define HWLOC_VERSION "2.10.0"
+#define HWLOC_VERSION "2.11.2"
 
 /* The library version optional greek suffix string */
 #define HWLOC_VERSION_GREEK ""
@@ -750,10 +754,10 @@
 #define HWLOC_VERSION_MAJOR 2
 
 /* The library version minor number */
-#define HWLOC_VERSION_MINOR 10
+#define HWLOC_VERSION_MINOR 11
 
 /* The library version release number */
-#define HWLOC_VERSION_RELEASE 0
+#define HWLOC_VERSION_RELEASE 2
 
 /* Define to 1 on WINDOWS */
 #define HWLOC_WIN_SYS 1
@@ -783,7 +787,7 @@
 #define PACKAGE_NAME "hwloc"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "hwloc 2.10.0"
+#define PACKAGE_STRING "hwloc 2.11.2"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "hwloc"
@@ -792,18 +796,18 @@
 #define PACKAGE_URL ""
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "2.10.0"
+#define PACKAGE_VERSION "2.11.2"
 
-/* The size of `unsigned int', as computed by sizeof. */
+/* The size of 'unsigned int', as computed by sizeof. */
 #define SIZEOF_UNSIGNED_INT 4
 
-/* The size of `unsigned long', as computed by sizeof. */
+/* The size of 'unsigned long', as computed by sizeof. */
 #define SIZEOF_UNSIGNED_LONG 4
 
-/* The size of `void *', as computed by sizeof. */
+/* The size of 'void *', as computed by sizeof. */
 #define SIZEOF_VOID_P 8
 
-/* Define to 1 if all of the C90 standard headers exist (not just the ones
+/* Define to 1 if all of the C89 standard headers exist (not just the ones
    required in a freestanding environment). This macro is provided for
    backward compatibility; new code need not use it. */
 #define STDC_HEADERS 1
@@ -814,7 +818,7 @@
 #endif
 
 
-/* Enable extensions on AIX 3, Interix.  */
+/* Enable extensions on AIX, Interix, z/OS.  */
 #ifndef _ALL_SOURCE
 # define _ALL_SOURCE 1
 #endif
@@ -875,11 +879,15 @@
 #ifndef __STDC_WANT_IEC_60559_DFP_EXT__
 # define __STDC_WANT_IEC_60559_DFP_EXT__ 1
 #endif
+/* Enable extensions specified by C23 Annex F.  */
+#ifndef __STDC_WANT_IEC_60559_EXT__
+# define __STDC_WANT_IEC_60559_EXT__ 1
+#endif
 /* Enable extensions specified by ISO/IEC TS 18661-4:2015.  */
 #ifndef __STDC_WANT_IEC_60559_FUNCS_EXT__
 # define __STDC_WANT_IEC_60559_FUNCS_EXT__ 1
 #endif
-/* Enable extensions specified by ISO/IEC TS 18661-3:2015.  */
+/* Enable extensions specified by C23 Annex H and ISO/IEC TS 18661-3:2015.  */
 #ifndef __STDC_WANT_IEC_60559_TYPES_EXT__
 # define __STDC_WANT_IEC_60559_TYPES_EXT__ 1
 #endif
@@ -903,7 +911,7 @@
 
 
 /* Version number of package */
-#define VERSION "2.10.0"
+#define VERSION "2.11.2"
 
 /* Define to 1 if the X Window System is missing or not being used. */
 #define X_DISPLAY_MISSING 1
