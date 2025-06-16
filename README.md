@@ -8,9 +8,9 @@
 
 This repository only contains a binary build of XMRig dependencies. 
 
-* [libuv](https://github.com/libuv/libuv) 1.49.2
-* [OpenSSL](https://www.openssl.org) 3.0.15
-* [hwloc](https://www.open-mpi.org/projects/hwloc) 2.11.2
+* [libuv](https://libuv.org/) 1.51.0
+* [OpenSSL](https://openssl-library.org/) 3.0.16
+* [hwloc](https://www.open-mpi.org/projects/hwloc) 2.12.1
 
 ## Usage
 ### Microsoft Visual Studio 2022

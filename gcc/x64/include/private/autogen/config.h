@@ -140,6 +140,10 @@
    0 if you don't. */
 #define HAVE_DECL_PTHREAD_SETAFFINITY_NP 0
 
+/* Define to 1 if you have the declaration of 'rsmi_dev_partition_id_get', and
+   to 0 if you don't. */
+/* #undef HAVE_DECL_RSMI_DEV_PARTITION_ID_GET */
+
 /* Embedded mode; just assume we do not have Valgrind support */
 #define HAVE_DECL_RUNNING_ON_VALGRIND 0
 
@@ -341,6 +345,9 @@
 
 /* Define to 1 if you have the 'putwc' function. */
 #define HAVE_PUTWC 1
+
+/* Define to 1 if the system has the type 'RelationProcessorDie'. */
+/* #undef HAVE_RELATIONPROCESSORDIE */
 
 /* Define to 1 if the system has the type 'RelationProcessorPackage'. */
 /* #undef HAVE_RELATIONPROCESSORPACKAGE */
@@ -689,9 +696,6 @@
 /* Define to 1 if zeDevicePciGetPropertiesExt is available */
 /* #undef HWLOC_HAVE_ZEDEVICEPCIGETPROPERTIESEXT */
 
-/* Define to 1 if zesInit is available */
-/* #undef HWLOC_HAVE_ZESINIT */
-
 /* Define to 1 on HP-UX */
 /* #undef HWLOC_HPUX_SYS */
 
@@ -745,7 +749,7 @@
 
 /* The library version, always available, even in embedded mode, contrary to
    VERSION */
-#define HWLOC_VERSION "2.11.2"
+#define HWLOC_VERSION "2.12.1"
 
 /* The library version optional greek suffix string */
 #define HWLOC_VERSION_GREEK ""
@@ -754,10 +758,10 @@
 #define HWLOC_VERSION_MAJOR 2
 
 /* The library version minor number */
-#define HWLOC_VERSION_MINOR 11
+#define HWLOC_VERSION_MINOR 12
 
 /* The library version release number */
-#define HWLOC_VERSION_RELEASE 2
+#define HWLOC_VERSION_RELEASE 1
 
 /* Define to 1 on WINDOWS */
 #define HWLOC_WIN_SYS 1
@@ -787,7 +791,7 @@
 #define PACKAGE_NAME "hwloc"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "hwloc 2.11.2"
+#define PACKAGE_STRING "hwloc 2.12.1"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "hwloc"
@@ -796,7 +800,7 @@
 #define PACKAGE_URL ""
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "2.11.2"
+#define PACKAGE_VERSION "2.12.1"
 
 /* The size of 'unsigned int', as computed by sizeof. */
 #define SIZEOF_UNSIGNED_INT 4
@@ -911,7 +915,7 @@
 
 
 /* Version number of package */
-#define VERSION "2.11.2"
+#define VERSION "2.12.1"
 
 /* Define to 1 if the X Window System is missing or not being used. */
 #define X_DISPLAY_MISSING 1
