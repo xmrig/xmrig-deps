@@ -14,7 +14,7 @@ This repository only contains a binary build of XMRig dependencies.
 
 ## Usage
 ### Microsoft Visual Studio 2022
-- x64 `cmake .. -G "Visual Studio 17 2022" -A x64 -DXMRIG_DEPS=c:\xmrig-deps\msvc2019\x64`
+- x64 `cmake .. -G "Visual Studio 17 2022" -A x64 -DXMRIG_DEPS=c:\xmrig-deps\msvc2022\x64`
 
 ### Microsoft Visual Studio 2019
 - x64 `cmake .. -G "Visual Studio 16 2019" -A x64 -DXMRIG_DEPS=c:\xmrig-deps\msvc2019\x64`
