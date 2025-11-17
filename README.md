@@ -13,6 +13,9 @@ This repository only contains a binary build of XMRig dependencies.
 * [hwloc](https://www.open-mpi.org/projects/hwloc) 2.12.1
 
 ## Usage
+### Microsoft Visual Studio 2026
+- x64 `cmake .. -G "Visual Studio 18 2026" -A x64 -DXMRIG_DEPS=c:\xmrig-deps\msvc2026\x64`
+
 ### Microsoft Visual Studio 2022
 - x64 `cmake .. -G "Visual Studio 17 2022" -A x64 -DXMRIG_DEPS=c:\xmrig-deps\msvc2022\x64`
 
