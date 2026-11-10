@@ -1,5 +1,6 @@
 /*
- * Copyright © 2021-2024 Inria.  All rights reserved.
+ * SPDX-License-Identifier: BSD-3-Clause
+ * Copyright © 2021-2026 Inria.  All rights reserved.
  * See COPYING in top-level directory.
  */
 
@@ -54,7 +55,7 @@ extern "C" {
  * be used instead, see hwloc_levelzero_get_device_osdev().
  *
  * This function is currently only implemented in a meaningful way for
- * Linux; other systems will simply get a full cpuset.
+ * Linux; other systems will simply get the cpuset of the entire topology.
  *
  * \return 0 on success.
  * \return -1 on error, for instance if device information could not be found.
@@ -115,7 +116,7 @@ hwloc_levelzero_get_device_cpuset(hwloc_topology_t topology __hwloc_attribute_un
  * be used instead, see hwloc_levelzero_get_device_osdev().
  *
  * This function is currently only implemented in a meaningful way for
- * Linux; other systems will simply get a full cpuset.
+ * Linux; other systems will simply get the cpuset of the entire topology.
  *
  * \return 0 on success.
  * \return -1 on error, for instance if device information could not be found.
@@ -136,6 +137,8 @@ hwloc_levelzero_get_sysman_device_cpuset(hwloc_topology_t topology __hwloc_attri
     return -1;
   }
 
+  pci.stype =  ZES_STRUCTURE_TYPE_PCI_PROPERTIES;
+  pci.pNext = NULL;
   res = zesDevicePciGetProperties(device, &pci);
   if (res != ZE_RESULT_SUCCESS) {
     errno = EINVAL;
@@ -254,6 +257,8 @@ hwloc_levelzero_get_sysman_device_osdev(hwloc_topology_t topology, zes_device_ha
     return NULL;
   }
 
+  pci.stype = ZES_STRUCTURE_TYPE_PCI_PROPERTIES;
+  pci.pNext = NULL;
   res = zesDevicePciGetProperties(device, &pci);
   if (res != ZE_RESULT_SUCCESS) {
     errno = EINVAL;

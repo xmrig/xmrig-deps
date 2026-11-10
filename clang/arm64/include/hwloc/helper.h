@@ -1,4 +1,5 @@
 /*
+ * SPDX-License-Identifier: BSD-3-Clause
  * Copyright © 2009 CNRS
  * Copyright © 2009-2024 Inria.  All rights reserved.
  * Copyright © 2009-2012 Université Bordeaux
@@ -965,7 +966,7 @@ hwloc_distrib(hwloc_topology_t topology,
 {
   unsigned i;
   unsigned tot_weight;
-  unsigned given, givenweight;
+  unsigned given __hwloc_attribute_unused, givenweight;
   hwloc_cpuset_t *cpusetp = set;
 
   if (!n || (flags & ~HWLOC_DISTRIB_FLAG_REVERSE)) {

@@ -1,4 +1,5 @@
 /*
+ * SPDX-License-Identifier: BSD-3-Clause
  * Copyright © 2009 CNRS
  * Copyright © 2009-2025 Inria.  All rights reserved.
  * Copyright © 2009-2012 Université Bordeaux
@@ -47,6 +48,8 @@
  * See hwloc/inlines.h for the actual inline code of some functions below.
  * See hwloc/export.h for exporting topologies to XML or to synthetic descriptions.
  * See hwloc/distances.h for querying and modifying distances between objects.
+ * See hwloc/memattrs.h for querying and modifying memory attributes such as Bandwidth.
+ * See hwloc/cpukinds.h for querying and modifying kinds of CPU cores.
  * See hwloc/diff.h for manipulating differences between similar topologies.
  */
 
@@ -157,6 +160,7 @@ HWLOC_DECLSPEC unsigned hwloc_get_api_version(void);
  *
  * Each bit may be converted into a PU object using
  * hwloc_get_pu_obj_by_os_index().
+ * \sa faq_indexes
  */
 typedef hwloc_bitmap_t hwloc_cpuset_t;
 /** \brief A non-modifiable ::hwloc_cpuset_t. */
@@ -169,6 +173,7 @@ typedef hwloc_const_bitmap_t hwloc_const_cpuset_t;
  * ::hwloc_bitmap_t (see hwloc/bitmap.h).
  * Each bit may be converted into a NUMA node object using
  * hwloc_get_numanode_obj_by_os_index().
+ * \sa faq_indexes
  *
  * When binding memory on a system without any NUMA node,
  * the single main memory bank is considered as NUMA node #0.
@@ -2144,7 +2149,7 @@ enum hwloc_topology_flags_e {
    */
   HWLOC_TOPOLOGY_FLAG_THISSYSTEM_ALLOWED_RESOURCES = (1UL<<2),
 
-  /** \brief Import support from the imported topology.
+  /** \brief Import all support bits from the imported topology.
    *
    * When importing a XML topology from a remote machine, binding is
    * disabled by default (see ::HWLOC_TOPOLOGY_FLAG_IS_THISSYSTEM).
@@ -2152,10 +2157,13 @@ enum hwloc_topology_flags_e {
    * supported feature bits reported by hwloc_topology_get_support().
    *
    * The flag ::HWLOC_TOPOLOGY_FLAG_IMPORT_SUPPORT actually imports
-   * support bits from the remote machine. It also sets the flag
+   * binding support bits from the remote machine. It also sets the flag
    * \p imported_support in the struct hwloc_topology_misc_support array.
    * If the imported XML did not contain any support information
    * (exporter hwloc is too old), this flag is not set.
+   *
+   * Note that non-binding support bits, e.g. the ability to discover
+   * NUMA nodes, are always imported.
    *
    * Note that these supported features are only relevant for the hwloc
    * installation that actually exported the XML topology
@@ -2380,7 +2388,7 @@ struct hwloc_topology_membind_support {
 /** \brief Flags describing miscellaneous features.
  */
 struct hwloc_topology_misc_support {
-  /** Support was imported when importing another topology, see ::HWLOC_TOPOLOGY_FLAG_IMPORT_SUPPORT. */
+  /** All support bits were imported when importing another topology, see ::HWLOC_TOPOLOGY_FLAG_IMPORT_SUPPORT. */
   unsigned char imported_support;
 };
 
@@ -2414,8 +2422,9 @@ struct hwloc_topology_support {
  * in this case (see ::HWLOC_TOPOLOGY_FLAG_IS_THISSYSTEM).
  *
  * Topology flag ::HWLOC_TOPOLOGY_FLAG_IMPORT_SUPPORT may be used
- * to report the supported features of the original remote machine
- * instead. If it was successfully imported, \p imported_support
+ * to report all supported features of the original remote machine
+ * instead, including binding.
+ * If they were successfully imported, \p imported_support
  * will be set in the struct hwloc_topology_misc_support array.
  *
  * \return A pointer to a support structure.
@@ -2459,10 +2468,12 @@ enum hwloc_type_filter_e {
    * structure to the topology. An object brings structure when it has multiple
    * children and it is not the only child of its parent.
    *
-   * If all objects in the level are the only child of their parent, and if none
-   * of them has multiple children, the entire level is removed.
+   * If all objects in the level are the only child of their parent, or if all
+   * of them have a single child, the entire level may be removed.
+   * A common example is caches that are private to each core.
    *
-   * Cannot be set for I/O and Misc objects since the topology structure does not matter there.
+   * This filter cannot be used for I/O and Misc objects since the topology structure
+   * does not matter there.
    * \hideinitializer
    */
   HWLOC_TYPE_FILTER_KEEP_STRUCTURE = 2,
