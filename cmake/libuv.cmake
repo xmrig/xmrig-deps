@@ -12,12 +12,11 @@ set(libuv_args
 )
 
 if (MSVC)
-    list(APPEND libuv_args
-        -DCMAKE_POLICY_DEFAULT_CMP0091=NEW
-        -DCMAKE_POLICY_DEFAULT_CMP0141=NEW
-        -DCMAKE_MSVC_RUNTIME_LIBRARY=MultiThreaded
-        -DCMAKE_MSVC_DEBUG_INFORMATION_FORMAT=ProgramDatabase
-        -DCMAKE_PROJECT_libuv_INCLUDE=${CMAKE_CURRENT_LIST_DIR}/libuv_pdb.cmake
+    # libuv.pdb: the target is uv_a, and its "lib" prefix applies to the PDB as well.
+    list(APPEND libuv_args ${msvc_args}
+        -DCMAKE_PROJECT_libuv_INCLUDE=${CMAKE_CURRENT_LIST_DIR}/msvc_pdb.cmake
+        -DXMRIG_PDB_TARGET=uv_a
+        -DXMRIG_PDB_NAME=uv
     )
 else()
     # uv_cpu_info() of 1.52 passes a const char** as char**, an error since GCC 14. Fixed in 1.53.0 by

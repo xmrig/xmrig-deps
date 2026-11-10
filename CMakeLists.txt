@@ -31,18 +31,21 @@ set(stage ${CMAKE_BINARY_DIR}/stage)
 file(MAKE_DIRECTORY ${XMRIG_DEPS_DOWNLOADS} ${stage}/include ${stage}/lib)
 cmake_host_system_information(RESULT jobs QUERY NUMBER_OF_LOGICAL_CORES)
 
+# The dependencies that CMake builds with MSVC: with the static C runtime, as XMRig's release build uses,
+# and their debug information in a PDB next to each library (cmake/msvc_pdb.cmake).
+set(msvc_args
+    -DCMAKE_POLICY_DEFAULT_CMP0091=NEW
+    -DCMAKE_POLICY_DEFAULT_CMP0141=NEW
+    -DCMAKE_MSVC_RUNTIME_LIBRARY=MultiThreaded
+    -DCMAKE_MSVC_DEBUG_INFORMATION_FORMAT=ProgramDatabase
+)
+
 include(cmake/libuv.cmake)
 include(cmake/openssl.cmake)
-set(deps libuv openssl)
-
-# The MSVC directories have no hwloc: XMRig builds its own bundled copy there.
-if (NOT MSVC)
-    include(cmake/hwloc.cmake)
-    list(APPEND deps hwloc)
-endif()
+include(cmake/hwloc.cmake)
 
 add_custom_target(publish ALL
     COMMAND ${CMAKE_COMMAND} -DSTAGE=${stage} -DDEST=${CMAKE_CURRENT_SOURCE_DIR}/${XMRIG_DEPS_TARGET} -P ${CMAKE_CURRENT_SOURCE_DIR}/cmake/publish.cmake
-    DEPENDS ${deps}
+    DEPENDS libuv openssl hwloc
     VERBATIM
 )
