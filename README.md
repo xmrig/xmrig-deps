@@ -8,12 +8,14 @@
 
 This repository only contains a binary build of XMRig dependencies. 
 
-* [libuv](https://libuv.org/) 1.52.1
+* [libuv](https://libuv.org/) 1.53.0
 * [OpenSSL](https://openssl-library.org/) 3.5.9
 * [hwloc](https://www.open-mpi.org/projects/hwloc) 2.15.0
 
 These are the versions in `clang/arm64`, `gcc/x64` and `msvc2026/*`.
 The other directories have older versions and are no longer supported.
+
+Programs that link this libuv on Windows also need the system library `synchronization`.
 
 ## Usage
 ### Microsoft Visual Studio 2026

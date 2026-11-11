@@ -18,10 +18,6 @@ if (MSVC)
         -DXMRIG_PDB_TARGET=uv_a
         -DXMRIG_PDB_NAME=uv
     )
-else()
-    # uv_cpu_info() of 1.52 passes a const char** as char**, an error since GCC 14. Fixed in 1.53.0 by
-    # a cast, so the code is the same; remove this with that version.
-    list(APPEND libuv_args -DCMAKE_C_FLAGS=-Wno-error=incompatible-pointer-types)
 endif()
 
 ExternalProject_Add(libuv

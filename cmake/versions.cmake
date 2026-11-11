@@ -1,10 +1,9 @@
 # The releases to build. To update a dependency, change its version and SHA256 here, then run
 # cmake/update.cmake.
 
-# Not 1.53.0 yet: on Windows it needs the system library "synchronization", which XMRig doesn't link
-# (EXTRA_LIBS in its CMakeLists.txt).
-set(LIBUV_VERSION 1.52.1)
-set(LIBUV_SHA256 66d511b9e6e334c0e62279eb234fbfb2b3110b1479c09b95b44c7afca8cff9e7)
+# From 1.53.0, programs on Windows also link the system library "synchronization".
+set(LIBUV_VERSION 1.53.0)
+set(LIBUV_SHA256 cb0d6dd2128d5a95bd242c6cc982a24fe608fa93da57b6b4ec763b0018c53e64)
 
 # The 3.5 LTS line.
 set(OPENSSL_VERSION 3.5.9)
