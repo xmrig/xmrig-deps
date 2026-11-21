@@ -43,11 +43,22 @@ else()
     find_program(XMRIG_SH NAMES sh REQUIRED)
     find_program(XMRIG_MAKE NAMES make REQUIRED)
 
+    # On macOS also the architecture and the oldest release to run on; configure finds the machine it
+    # builds on itself, as the Mac may be of the other architecture.
+    set(hwloc_cflags "-O2 -ffile-prefix-map=<SOURCE_DIR>=.")
+
+    if (APPLE)
+        string(APPEND hwloc_cflags " -arch ${apple_arch} -mmacosx-version-min=${CMAKE_OSX_DEPLOYMENT_TARGET}")
+        set(hwloc_machine --host=${hwloc_triplet})
+    else()
+        set(hwloc_machine --build=${hwloc_triplet} --host=${hwloc_triplet})
+    endif()
+
     ExternalProject_Add(hwloc ${hwloc_source}
         BUILD_IN_SOURCE     ON
-        CONFIGURE_COMMAND   ${XMRIG_SH} ./configure --prefix=${stage} --build=${hwloc_triplet} --host=${hwloc_triplet}
+        CONFIGURE_COMMAND   ${XMRIG_SH} ./configure --prefix=${stage} ${hwloc_machine}
                             --disable-shared --enable-static --disable-io --disable-libudev --disable-libxml2
-                            CC=${CMAKE_C_COMPILER} "CFLAGS=-O2 -ffile-prefix-map=<SOURCE_DIR>=."
+                            CC=${CMAKE_C_COMPILER} "CFLAGS=${hwloc_cflags}"
         BUILD_COMMAND       ${XMRIG_MAKE} -j${jobs} -C hwloc
         INSTALL_COMMAND     ${XMRIG_MAKE} -C include install
         COMMAND             ${XMRIG_MAKE} -C hwloc install

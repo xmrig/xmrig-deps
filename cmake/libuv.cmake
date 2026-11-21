@@ -18,6 +18,11 @@ if (MSVC)
         -DXMRIG_PDB_TARGET=uv_a
         -DXMRIG_PDB_NAME=uv
     )
+elseif (APPLE)
+    list(APPEND libuv_args
+        -DCMAKE_OSX_ARCHITECTURES=${apple_arch}
+        -DCMAKE_OSX_DEPLOYMENT_TARGET=${CMAKE_OSX_DEPLOYMENT_TARGET}
+    )
 endif()
 
 ExternalProject_Add(libuv

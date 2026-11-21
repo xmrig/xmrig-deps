@@ -4,12 +4,16 @@
 
 cmake_minimum_required(VERSION 3.25)
 
+# The oldest macOS that the macOS targets run on: the oldest that libuv supports. Before project(), as
+# CMake requires.
+set(CMAKE_OSX_DEPLOYMENT_TARGET 11.0 CACHE STRING "The oldest macOS of the macOS targets")
+
 project(xmrig-deps LANGUAGES C)
 
 set(XMRIG_DEPS_TARGET "" CACHE STRING "The directory of this repository to update, e.g. msvc2026/x64")
 set(XMRIG_DEPS_DOWNLOADS ${CMAKE_BINARY_DIR}/downloads CACHE PATH "Where the source archives are kept")
 
-# The Configure target of OpenSSL and, for hwloc, the triplet of each directory.
+# The Configure target of OpenSSL, for hwloc the triplet, and for macOS the architecture of each directory.
 if (XMRIG_DEPS_TARGET MATCHES "^msvc[0-9]+/x64$")
     set(openssl_target VC-WIN64A)
 elseif (XMRIG_DEPS_TARGET MATCHES "^msvc[0-9]+/arm64$")
@@ -20,6 +24,14 @@ elseif (XMRIG_DEPS_TARGET STREQUAL "gcc/x64")
 elseif (XMRIG_DEPS_TARGET STREQUAL "clang/arm64")
     set(openssl_target mingwarm64)
     set(hwloc_triplet aarch64-w64-mingw32)
+elseif (XMRIG_DEPS_TARGET STREQUAL "macos/arm64")
+    set(openssl_target darwin64-arm64)
+    set(hwloc_triplet aarch64-apple-darwin)
+    set(apple_arch arm64)
+elseif (XMRIG_DEPS_TARGET STREQUAL "macos/x64")
+    set(openssl_target darwin64-x86_64)
+    set(hwloc_triplet x86_64-apple-darwin)
+    set(apple_arch x86_64)
 else()
     message(FATAL_ERROR "xmrig-deps: unknown XMRIG_DEPS_TARGET '${XMRIG_DEPS_TARGET}'; use cmake/update.cmake to run this")
 endif()

@@ -53,6 +53,11 @@ else()
     list(APPEND openssl_options -ffunction-sections -fdata-sections -O2)
 endif()
 
+# On macOS the oldest release to run on; the Configure target gives the architecture.
+if (APPLE)
+    list(APPEND openssl_options -mmacosx-version-min=${CMAKE_OSX_DEPLOYMENT_TARGET})
+endif()
+
 # The compiler and archiver by name, all on PATH: OpenSSL records its compiler line in the library, where
 # a full path would tell where the tools are installed. With MSVC cl is on PATH too, and a path with
 # spaces breaks OpenSSL's makefile.
@@ -90,6 +95,12 @@ endif()
 # can't create at random, as an OpenSSL elsewhere would take what it finds there. The prefix too: the
 # library records the directories of engines and modules under it, so only the install step names the
 # real directory.
+if (WIN32)
+    set(openssl_dir C:/Windows/System32/OpenSSL)
+else()
+    set(openssl_dir /etc/ssl)
+endif()
+
 ExternalProject_Add(openssl
     URL                 https://github.com/openssl/openssl/releases/download/openssl-${OPENSSL_VERSION}/openssl-${OPENSSL_VERSION}.tar.gz
     URL_HASH            SHA256=${OPENSSL_SHA256}
@@ -98,7 +109,7 @@ ExternalProject_Add(openssl
     DOWNLOAD_NO_PROGRESS ON
     PREFIX              ${CMAKE_BINARY_DIR}/openssl
     CONFIGURE_COMMAND   ${openssl_env} ${XMRIG_PERL} <SOURCE_DIR>/Configure ${openssl_target} ${openssl_options}
-                        --prefix=C:/Windows/System32/OpenSSL --openssldir=C:/Windows/System32/OpenSSL --libdir=lib ${openssl_cc}
+                        --prefix=${openssl_dir} --openssldir=${openssl_dir} --libdir=lib ${openssl_cc}
     BUILD_COMMAND       ${openssl_env} ${openssl_make} build_libs
     INSTALL_COMMAND     ${openssl_env} ${openssl_make} install_dev INSTALLTOP=${stage}
     LOG_CONFIGURE       ON

@@ -4,14 +4,16 @@
 #   cmake "-DTARGETS=gcc/x64;msvc2026/x64" -P cmake/update.cmake
 #
 # Without TARGETS it builds every target whose toolchain is on this machine and skips the others; a
-# target named in TARGETS must have one. find_msys2() below says how MSYS2 is found. Each target starts
-# from a clean directory under build/, only the downloads are kept.
+# target named in TARGETS must have one. find_msys2() below says how MSYS2 is found; the macOS targets
+# build on a Mac. Each target starts from a clean directory under build/, only the downloads are kept.
 
 cmake_minimum_required(VERSION 3.25)
 
 get_filename_component(repo ${CMAKE_CURRENT_LIST_DIR}/.. ABSOLUTE)
 
-set(all_targets clang/arm64 gcc/x64 msvc2026/arm64 msvc2026/x64)
+set(all_targets clang/arm64 gcc/x64 macos/arm64 macos/x64 msvc2026/arm64 msvc2026/x64)
+
+cmake_host_system_information(RESULT jobs QUERY NUMBER_OF_LOGICAL_CORES)
 
 if (DEFINED TARGETS)
     set(targets_required ON)
@@ -84,15 +86,22 @@ macro(toolchain_missing target reason)
 endmacro()
 
 # The arguments of the two cmake commands that build a target from a clean directory. build_root is
-# build/ of the repository, or a drive letter mapped to it.
+# build/ of the repository, or a drive letter mapped to it. Ninja, or on a Mac, where the Xcode tools
+# come without it, make.
 macro(prepare_target target compiler build_root)
     file(REMOVE_RECURSE ${repo}/build/${target})
     file(MAKE_DIRECTORY ${repo}/build)
 
+    if (CMAKE_HOST_APPLE)
+        set(generator "Unix Makefiles")
+    else()
+        set(generator Ninja)
+    endif()
+
     set(build_dir ${build_root}/${target})
-    set(configure_args -S ${repo} -B ${build_dir} -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_COMPILER=${compiler}
+    set(configure_args -S ${repo} -B ${build_dir} -G ${generator} -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_COMPILER=${compiler}
         -DXMRIG_DEPS_TARGET=${target} -DXMRIG_DEPS_DOWNLOADS=${build_root}/downloads)
-    set(build_args --build ${build_dir})
+    set(build_args --build ${build_dir} --parallel ${jobs})
 
     message(STATUS "${target}: building")
 endmacro()
@@ -120,6 +129,33 @@ function(build_msys2 target environment subdir compiler)
 
     execute_process(COMMAND ${env} ${CMAKE_COMMAND} ${configure_args} COMMAND_ERROR_IS_FATAL ANY)
     execute_process(COMMAND ${env} ${CMAKE_COMMAND} ${build_args} COMMAND_ERROR_IS_FATAL ANY)
+
+    set(built ${built} ${target} PARENT_SCOPE)
+endfunction()
+
+# A target of macOS, with the Xcode command line tools of the Mac it runs on, which build for either
+# architecture.
+function(build_macos target)
+    set(rc 1)
+
+    if (CMAKE_HOST_APPLE)
+        execute_process(COMMAND xcrun --find clang RESULT_VARIABLE rc OUTPUT_QUIET ERROR_QUIET)
+    endif()
+
+    if (NOT CMAKE_HOST_APPLE)
+        toolchain_missing(${target} "the macOS targets build on a Mac")
+        set(skipped ${skipped} PARENT_SCOPE)
+        return()
+    elseif (NOT rc EQUAL 0)
+        toolchain_missing(${target} "no Xcode command line tools, install them with xcode-select --install")
+        set(skipped ${skipped} PARENT_SCOPE)
+        return()
+    endif()
+
+    prepare_target(${target} cc ${repo}/build)
+
+    execute_process(COMMAND ${CMAKE_COMMAND} ${configure_args} COMMAND_ERROR_IS_FATAL ANY)
+    execute_process(COMMAND ${CMAKE_COMMAND} ${build_args} COMMAND_ERROR_IS_FATAL ANY)
 
     set(built ${built} ${target} PARENT_SCOPE)
 endfunction()
@@ -208,6 +244,8 @@ foreach (target IN LISTS TARGETS)
         build_msys2(${target} CLANGARM64 clangarm64 clang)
     elseif (target STREQUAL "gcc/x64")
         build_msys2(${target} UCRT64 ucrt64 gcc)
+    elseif (target MATCHES "^macos/")
+        build_macos(${target})
     elseif (target STREQUAL "msvc2026/arm64")
         build_msvc(${target} "[18.0,19.0)" arm64 Microsoft.VisualStudio.Component.VC.Tools.ARM64)
     elseif (target STREQUAL "msvc2026/x64")
