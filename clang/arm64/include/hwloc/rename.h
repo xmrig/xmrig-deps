@@ -1,4 +1,5 @@
 /*
+ * SPDX-License-Identifier: BSD-3-Clause
  * Copyright © 2009-2011 Cisco Systems, Inc.  All rights reserved.
  * Copyright © 2010-2025 Inria.  All rights reserved.
  * See COPYING in top-level directory.
@@ -598,6 +599,12 @@ extern "C" {
 #define hwloc_rsmi_get_device_osdev HWLOC_NAME(rsmi_get_device_osdev)
 #define hwloc_rsmi_get_device_osdev_by_index HWLOC_NAME(rsmi_get_device_osdev_by_index)
 
+/* amdsmi.h */
+
+#define hwloc_amdsmi_get_device_cpuset HWLOC_NAME(amdsmi_get_device_cpuset)
+#define hwloc_amdsmi_get_device_osdev HWLOC_NAME(amdsmi_get_device_osdev)
+#define hwloc_amdsmi_get_device_osdev_by_index HWLOC_NAME(amdsmi_get_device_osdev_by_index)
+
 /* levelzero.h */
 
 #define hwloc_levelzero_get_device_cpuset HWLOC_NAME(levelzero_get_device_cpuset)
@@ -799,7 +806,6 @@ extern "C" {
 
 #define hwloc_special_level_s HWLOC_NAME(special_level_s)
 
-#define hwloc_pci_forced_locality_s HWLOC_NAME(pci_forced_locality_s)
 #define hwloc_pci_locality_s HWLOC_NAME(pci_locality_s)
 
 #define hwloc_topology_forced_component_s HWLOC_NAME(topology_forced_component)
@@ -873,6 +879,7 @@ extern "C" {
 #define hwloc_internal_distances_add_by_index HWLOC_NAME(internal_distances_add_by_index)
 #define hwloc_internal_distances_invalidate_cached_objs HWLOC_NAME(hwloc_internal_distances_invalidate_cached_objs)
 
+#define hwloc_internal_memattr_set_value HWLOC_NAME(internal_memattr_set_value)
 #define hwloc_internal_memattr_s HWLOC_NAME(internal_memattr_s)
 #define hwloc_internal_memattr_target_s HWLOC_NAME(internal_memattr_target_s)
 #define hwloc_internal_memattr_initiator_s HWLOC_NAME(internal_memattr_initiator_s)

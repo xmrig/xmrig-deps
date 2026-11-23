@@ -1,4 +1,5 @@
 /*
+ * SPDX-License-Identifier: BSD-3-Clause
  * Copyright © 2012-2023 Inria.  All rights reserved.
  * Copyright © 2013, 2018 Université Bordeaux.  All right reserved.
  * See COPYING in top-level directory.
@@ -147,7 +148,7 @@ hwloc_opencl_get_device_pci_busid(cl_device_id device,
  *
  * This function is currently only implemented in a meaningful way for
  * Linux with the AMD or NVIDIA OpenCL implementation; other systems will simply
- * get a full cpuset.
+ * get the cpuset of the entire topology.
  *
  * \return 0 on success.
  * \return -1 on error, for instance if the device could not be found.

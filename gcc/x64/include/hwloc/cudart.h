@@ -1,4 +1,5 @@
 /*
+ * SPDX-License-Identifier: BSD-3-Clause
  * Copyright © 2010-2023 Inria.  All rights reserved.
  * Copyright © 2010-2011 Université Bordeaux
  * Copyright © 2011 Cisco Systems, Inc.  All rights reserved.
@@ -86,7 +87,7 @@ hwloc_cudart_get_device_pci_ids(hwloc_topology_t topology __hwloc_attribute_unus
  * be used instead, see hwloc_cudart_get_device_osdev_by_index().
  *
  * This function is currently only implemented in a meaningful way for
- * Linux; other systems will simply get a full cpuset.
+ * Linux; other systems will simply get the cpuset of the entire topology.
  *
  * \return 0 on success.
  * \return -1 on error, for instance if device information could not be found.

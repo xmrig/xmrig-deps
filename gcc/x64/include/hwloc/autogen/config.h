@@ -1,5 +1,6 @@
 /* include/hwloc/autogen/config.h.  Generated from config.h.in by configure.  */
 /* -*- c -*-
+ * SPDX-License-Identifier: BSD-3-Clause
  * Copyright © 2009 CNRS
  * Copyright © 2009-2022 Inria.  All rights reserved.
  * Copyright © 2009-2012 Université Bordeaux
@@ -12,10 +13,10 @@
 #ifndef HWLOC_CONFIG_H
 #define HWLOC_CONFIG_H
 
-#define HWLOC_VERSION "2.12.1"
+#define HWLOC_VERSION "2.15.0"
 #define HWLOC_VERSION_MAJOR 2
-#define HWLOC_VERSION_MINOR 12
-#define HWLOC_VERSION_RELEASE 1
+#define HWLOC_VERSION_MINOR 15
+#define HWLOC_VERSION_RELEASE 0
 #define HWLOC_VERSION_GREEK ""
 
 /* #undef HWLOC_PCI_COMPONENT_BUILTIN */
